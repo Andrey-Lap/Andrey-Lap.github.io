@@ -7,16 +7,16 @@
         <input  type="text" formControlName="username" placeholder="Имя" >
         <label class="body18 input-label">Имя</label>
         <p *ngIf="name?.invalid && (name?.dirty || name?.touched)" class=" body12 error-message"> Пожалуйста, введите корректное имя.</p>
-        <img *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="icon" src="../assets/images/cancel.png" alt="">
-        <img *ngIf="name?.valid && (name?.dirty || name?.touched)" class="icon" src="../assets/images/check circle.png" alt="">
+        <img *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="icon" src="./assets/images/cancel.png" alt="">
+        <img *ngIf="name?.valid && (name?.dirty || name?.touched)" class="icon" src="./assets/images/check circle.png" alt="">
        </div>
   
        <div class="form-wrap ">
         <input  type="text"  formControlName="password" placeholder="Телефон">
         <label class="body18 input-label">Телефон</label>
         <p *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class=" body12 error-message"> Пожалуйста, введите корректный телефон.</p>
-        <img *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="icon" src="../assets/images/cancel.png" alt="">
-        <img *ngIf="phone?.valid && (phone?.dirty || phone?.touched)" class="icon" src="../assets/images/check circle.png" alt="">
+        <img *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="icon" src="./assets/images/cancel.png" alt="">
+        <img *ngIf="phone?.valid && (phone?.dirty || phone?.touched)" class="icon" src="./assets/images/check circle.png" alt="">
        </div>
        
         <div class="form-wrap flex ">
