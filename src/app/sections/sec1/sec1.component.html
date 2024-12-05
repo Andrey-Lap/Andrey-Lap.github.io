@@ -1,0 +1,51 @@
+<section class="container background no-padding">
+  <div class="header">
+    <div class="logo">
+      <span class="ellips blue"></span>
+      <span class="ellips white"></span>
+      <span class="ellips text headline5">testLab</span>
+    </div>
+    <div class="nav" *ngIf="!isMobile">
+      <a class="body16" href="#part1">Как это работает</a>
+      <a class="body16" href="#part2">3-й блок</a>
+      <a class="body16" href="#part3">Вопросы и ответы</a>
+      <a class="body16" href="#part4">Форма</a>
+    </div>
+    <div class="menu" *ngIf="isMobile" (click)="open=!open">
+      <div class="menu-btn"></div>
+    </div>
+  </div>
+
+  <div class="menu-list" [class.active]="open">
+    <div class="menu-header">
+      <div class="logo">
+        <span class="ellips blue"></span>
+        <span class="ellips white"></span>
+        <span class="ellips text headline5">testLab</span>
+      </div>
+      <div class="cross" (click)="open=!open"></div>
+    </div>
+    <a class="body16" href="#part1">
+      <div class="menu-item">Как это работает <img src="../assets/images/fi-sr-angle-small-right.png" alt=""></div>
+    </a>
+    <a class="body16" href="#part2">
+      <div class="menu-item">3-й блок <img src="../assets/images/fi-sr-angle-small-right.png" alt=""></div>
+    </a>
+    <a class="body16" href="#part3">
+      <div class="menu-item">Вопросы и ответы <img src="../assets/images/fi-sr-angle-small-right.png" alt=""></div>
+    </a>
+    <a class="body16" href="#part4">
+      <div class="menu-item"> Форма <img src="../assets/images/fi-sr-angle-small-right.png" alt=""></div>
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="description" [class.descriptionMobile]="isMobile">
+      <div class="text">
+        <p class="headline1" [class.headline3]="isMobile" [class.headline4]="isMobileSmall">Говорят, никогда не поздно сменить профессию</p>
+        <p class="body18" [class.body16]="isMobile">Сделай круто тестовое задание и у тебя получится</p>
+      </div>
+      <button class="btn headline5">Проще простого!</button>
+    </div>
+  </div>
+</section>

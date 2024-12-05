@@ -1,0 +1,153 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Graphik LCG";
+    src: local("Nunito-Regular"), url('assets/fonts/Graphik-Regular-Web.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: local("Nunito-SemiBold"), url('assets/fonts/Graphik-Medium-Web.woff2') format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Graphik LCG";
+    src: local("Nunito-Bold"), url('assets/fonts/Graphik-Bold-Web.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Graphik LCG', sans-serif;
+}
+
+.headline1 {
+    font-size: 52px;
+    line-height: 64px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.headline2 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.headline3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #191C1F;
+}
+.headline4 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.headline5 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.headline6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.body18b {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #191C1F;
+}
+
+.body18 {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #5E646A;
+}
+
+.body16 {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #5E646A;
+}
+
+.body12 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #5E646A;
+}
+
+.container {
+    width: 100%;
+    padding: 80px 0;
+    text-align: -webkit-center;
+}
+
+.container2 {
+    width: 100%;
+
+    padding: 57px 0 45px 0;
+    background-color: #F6F8FA;
+    text-align: center;
+}
+
+.container4 {
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1300px) {
+    .container{
+        padding: 56px 0;
+    }
+    .container2{
+        padding: 27px 37px;
+    }
+    .header{
+        justify-content: space-between !important;
+        padding: 0 16px;
+    }
+
+   
+
+    swiper-container::part(button-prev) {
+        display: none;
+    }
+
+    swiper-container::part(button-next) {
+        display: none;
+    }
+
+    .wrap-container {
+        flex-direction: column;
+    }
+}

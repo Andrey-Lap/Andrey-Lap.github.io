@@ -1,0 +1,21 @@
+<section class="container2">
+    <p class="headline2"[class.headline4]="isMobileSmall" >Отзывы</p>
+    <div class="mySwiper">
+      <swiper-container init-="false" >
+        <swiper-slide *ngFor="let item of slides">
+          <div class="slideBox">
+            <div class="slideCard">
+              <img src='{{item.img}}' alt="">
+              <div class="slideUserInfo">
+                <p class="headline6">{{item.user}}</p>
+                <p class="body12">{{item.city}}</p>
+              </div>
+            </div>
+            <div class="slideText">
+              <p>{{item.text}} </p>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </section>

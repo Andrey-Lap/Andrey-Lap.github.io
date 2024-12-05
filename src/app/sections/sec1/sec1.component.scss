@@ -1,0 +1,227 @@
+.no-padding {
+    padding: 0;
+}
+
+.background {
+    background-image: linear-gradient(rgba(42, 108, 234, 0.8), rgba(42, 108, 234, 0.8)),
+        url("/assets/images/fon.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    max-width: 1920px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .ellips {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+
+    .blue {
+        background-color: #2A6CEA;
+        z-index: 1;
+    }
+
+    .white {
+        left: 12px;
+        background-color: #ECEFF2;
+    }
+
+    .text {
+        left: 45px;
+        color: #FFFFFF
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    padding: 4px 0;
+
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.menu {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .menu-btn {
+        width: 22px;
+        height: 12px;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 880px;
+
+
+    .description {
+        width: 748px;
+        height: 334px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        p {
+            color: white;
+        }
+
+        .btn {
+            padding: 20px 40px;
+            background-color: #ECEFF2;
+            border-radius: 4px;
+            color: #191C1F;
+            border: none;
+
+        }
+
+        .btn:hover {
+            border: 1px solid #C2C8CD;
+            background-color: white;
+            cursor: pointer;
+        }
+    }
+
+    .descriptionMobile {
+        width: 476px;
+        height: 229px;
+    }
+}
+
+.menu-list {
+    position: fixed;
+    display: block;
+    width: 70%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    padding: 0 20px;
+    z-index: 2;
+    background: white;
+    transition: right 0.5s 0.3s;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.menu-list.active {
+    right: 0;
+    transition: right 0.7s;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #ECEFF2;
+
+    .text {
+        color: #191C1F;
+    }
+}
+
+.cross {
+    position: relative;
+    width: 32px;
+    /* Ширина креста */
+    height: 32px;
+    /* Высота креста */
+    transform: rotate(45deg);
+}
+
+.cross::before,
+.cross::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    /* Цвет креста */
+}
+
+.cross::before {
+    width: 100%;
+    height: 2px;
+    /* Толщина линии */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.cross::after {
+    width: 2px;
+    /* Толщина линии */
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ECEFF2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 425px) {
+    .content {
+        align-items: flex-start;
+        height: 516px;
+        padding-top: 92px;
+        .descriptionMobile {
+            width: 288px;
+            height: 168px;
+            gap: 26px;
+        }
+    }
+
+}
+@media (max-width: 320px) {
+    .content {
+        height: 429px;
+        padding-top: 48px;
+    }
+}

@@ -1,0 +1,29 @@
+<section class="container" style="padding-bottom: 0;" id="part4">
+    <p class="headline2" [class.headline4]="isMobileSmall">Отправь форму</p>
+    <form [formGroup]="form" class="container4" (ngSubmit)="onSubmit()">
+      <div class="form-comtainer">
+     
+       <div class="form-wrap ">
+        <input  type="text" formControlName="username" placeholder="Имя" >
+        <label class="body18 input-label">Имя</label>
+        <p *ngIf="name?.invalid && (name?.dirty || name?.touched)" class=" body12 error-message"> Пожалуйста, введите корректное имя.</p>
+        <img *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="icon" src="../assets/images/cancel.png" alt="">
+        <img *ngIf="name?.valid && (name?.dirty || name?.touched)" class="icon" src="../assets/images/check circle.png" alt="">
+       </div>
+  
+       <div class="form-wrap ">
+        <input  type="text"  formControlName="password" placeholder="Телефон">
+        <label class="body18 input-label">Телефон</label>
+        <p *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class=" body12 error-message"> Пожалуйста, введите корректный телефон.</p>
+        <img *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="icon" src="../assets/images/cancel.png" alt="">
+        <img *ngIf="phone?.valid && (phone?.dirty || phone?.touched)" class="icon" src="../assets/images/check circle.png" alt="">
+       </div>
+       
+        <div class="form-wrap flex ">
+          <label class="body16 check-label"><input class="check" type="checkbox" >Согласен, отказываюсь</label>
+        </div>
+        <input class="form-wrap btn-form headline5" type="submit" [disabled]="form.invalid">
+      </div>
+    </form>
+    <div class="footer body18">© 2021 Лаборатория интернет</div>
+  </section>
